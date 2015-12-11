@@ -1,3 +1,6 @@
+a:hover{
+  text-decoration: none;
+}
 .logo {
   margin-top: 15px;
   font-size: 2em;
@@ -5,9 +8,14 @@
 }
 
 .social_icons {
-  height: 50px;
-  width: 50px;
-  margin-top: 25px;
+  height: 35px;
+  width: 35px;
+  margin-top: 150px;
+}
+
+.section-Name {
+  margin-left: 4%;
+  margin-bottom: 25px;
 }
 
 .project-box {
@@ -28,7 +36,7 @@
   transition: all 0.8s;
 }
 
-.project-box-highlighted:hover .project-subtitle{
+.project-box-highlighted:hover .project-subtitle, .project-box-highlighted:hover a {
   color: #fff;
   -webkit-transition: width 1s;
   transition: all 1s;
@@ -44,7 +52,7 @@
   font-size: 1.3em;
 } 
 
-.project-desc .project-subtitle {
+.project-desc .project-subtitle, .project-desc a{
   margin-top: 5px;
   color: #16a085;
 }
