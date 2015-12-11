@@ -1,9 +1,52 @@
-
-
 .logo {
   margin-top: 15px;
   font-size: 2em;
   font-weight: bold;
+}
+
+.social_icons {
+  height: 50px;
+  width: 50px;
+  margin-top: 25px;
+}
+
+.project-box {
+  margin: 5px;
+  height: 400px;
+  width: 100%;
+}
+
+.youtube-preview img {
+  width: 90%;
+  margin: 0 5%;
+  height: 300px;
+}
+
+.project-box-highlighted:hover .project-desc{
+  background-color: #8acfc2;
+  -webkit-transition: width 0.8s;
+  transition: all 0.8s;
+}
+
+.project-box-highlighted:hover .project-subtitle{
+  color: #fff;
+  -webkit-transition: width 1s;
+  transition: all 1s;
+}
+
+.project-desc {
+  width: 90%;
+  margin: 0 5%;
+  padding: 15px 0 10px 0;
+}
+
+.project-desc .project-title {
+  font-size: 1.3em;
+} 
+
+.project-desc .project-subtitle {
+  margin-top: 5px;
+  color: #16a085;
 }
 /* #Navigation
 ================================================== */
