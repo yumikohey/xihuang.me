@@ -96,6 +96,8 @@ var Board = function(){
 			for(var c=0; c <= columnSize; c++){
 				if(that.map[r][c] === that.currentPlayer.value) {
 					strikeCount += 1;
+
+					// positive slope
 					for(var s=1; s < winStrikes; s++){
 						if(r-s >=0 && c+s <= columnSize){
 							if(that.map[r-s][c+s] === that.currentPlayer.value) {
@@ -108,7 +110,10 @@ var Board = function(){
 							return that.win;
 						}
 					}
+					// reset strike count to 1.
 					strikeCount = 1;
+
+					// negative slope
 					for(var s=1; s < winStrikes; s++){
 						if(r-s >=0 && c-s >=0){
 							if(that.map[r-s][c-s] === that.currentPlayer.value) {
@@ -121,7 +126,10 @@ var Board = function(){
 							return that.win;
 						}
 					}
+
+					// reset strike count to 0.
 					strikeCount = 0;
+
 				}else if(strikeCount !==0 && that.map[r][c] !== that.currentPlayer.value){
 					strikeCount = 0;
 				}
