@@ -7,6 +7,7 @@ var Board = function(){
 	var boardLeft = boardCoordinate.left;
 	var columnSize = 7;
 	var rowSize = 6;
+	var winStrikes = 4;
 
 	this.init = function() {
 
@@ -61,7 +62,7 @@ var Board = function(){
 			for(var j=0; j <=columnSize; j++){
 				if(that.map[r][j] === that.currentPlayer.value){
 					strikeCount += 1;
-					if(strikeCount === 4){
+					if(strikeCount === winStrikes){
 						// need to update!
 						that.win = true;
 						return that.win;
@@ -78,7 +79,7 @@ var Board = function(){
 			for(var r=rowSize; r >= 0; r--){
 				if(that.map[r][c] === that.currentPlayer.value){
 					strikeCount += 1;
-					if(strikeCount === 4){
+					if(strikeCount === winStrikes){
 						// need to update!
 						that.win = true;
 						return that.win;
@@ -95,26 +96,26 @@ var Board = function(){
 			for(var c=0; c <= columnSize; c++){
 				if(that.map[r][c] === that.currentPlayer.value) {
 					strikeCount += 1;
-					for(var s=1; s < 4; s++){
+					for(var s=1; s < winStrikes; s++){
 						if(r-s >=0 && c+s <= columnSize){
 							if(that.map[r-s][c+s] === that.currentPlayer.value) {
 								strikeCount += 1;
 							}
 						}
-						if(strikeCount === 4){
+						if(strikeCount === winStrikes){
 							// need to update!
 							that.win = true;
 							return that.win;
 						}
 					}
 					strikeCount = 1;
-					for(var s=1; s < 4; s++){
+					for(var s=1; s < winStrikes; s++){
 						if(r-s >=0 && c-s >=0){
 							if(that.map[r-s][c-s] === that.currentPlayer.value) {
 								strikeCount += 1;
 							}
 						}
-						if(strikeCount === 4){
+						if(strikeCount === winStrikes){
 							// need to update!
 							that.win = true;
 							return that.win;
@@ -140,11 +141,15 @@ var Board = function(){
 				// clear the screen and redraw the board
 				board.innerHTML = '';
 				that.drawMap();
-				// buggggs 
+
 				if(that.checkWinner()){
-					alert(that.currentPlayer.name + ' won!');
-					that.init();
+					setTimeout(function(){
+						alert(that.currentPlayer.name + ' won!');
+						that.init();
+					}, 50);
+					return;
 				}
+
 				// shift player once user click;
 				if(that.currentPlayer.value === 1) {
 					that.currentPlayer = that.player2;
