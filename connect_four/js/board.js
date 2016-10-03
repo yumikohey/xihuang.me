@@ -164,7 +164,7 @@ var Board = function(){
 				if(that.checkWinner()){
 					setTimeout(function(){
 						alert(that.currentPlayer.name + ' won!');
-					}, 100);
+					}, 200);
 					return;
 				}
 

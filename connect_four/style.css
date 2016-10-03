@@ -41,16 +41,18 @@ header div {
 	height: 50px;
 	width: 50px;
 	border-radius: 50px;
+	-webkit-animation-timing-function: ease;
+	animation-timing-function: ease;
 }
 
 .red.drop, .yellow.drop{
 	position: absolute;
-	animation-name: drop;
-	animation-duration: 0.25s;
+	animation: drop 0.25s;
 }
 
 @keyframes drop {
-	0% { opacity: 0.5; top: 125px; }
+	0% { opacity: 0.5; top: 110px; }
+	25% { opacity: 0.5; top: 130px; }
 	100% { opacity: 1; }
 }
 
