@@ -139,6 +139,9 @@ var Board = function(){
 	}
 
 	board.addEventListener('click', function(event){
+		if(that.win){
+			return that.init();
+		}
 		// check which column does the player click;
 		// divided by 52, which is the cell's width;
 

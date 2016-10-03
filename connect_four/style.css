@@ -75,3 +75,7 @@ header div {
 	font-size: 28px;
 	line-height: 56px;
 }
+
+#startGame:hover{
+	cursor: pointer;
+}
