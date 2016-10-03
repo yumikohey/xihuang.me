@@ -1,10 +1,21 @@
 * {
 	background-color: #efefef;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+header {
+	color: #0cd395;
+	text-align: center;
+}
+
+header div {
+	font-size: 5rem;
 }
 
 .container {
 	width: 600px;
-	margin: 100px auto;
+	margin: 50px auto;
 	display: flex;
 	justify-content: space-around;
 }
@@ -46,4 +57,21 @@
 	background: -o-radial-gradient(#0900FF 50%, #0A04BD 60%, #0900FF 70%); /* For Opera 11.6 to 12.0 */
 	background: -moz-radial-gradient(#0900FF 50%, #0A04BD 60%, #0900FF 70%); /* For Firefox 3.6 to 15 */
 	background: radial-gradient(#0900FF 50%, #0A04BD 60%, #0900FF 70%); /* Standard syntax */
+}
+
+.startSection {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#startGame {
+	border-radius: 50px;
+	width: 150px;
+	height: 56px;
+	border: 3px solid #28F2B3;
+	color: #0cd395;
+	text-align: center;
+	font-size: 28px;
+	line-height: 56px;
 }

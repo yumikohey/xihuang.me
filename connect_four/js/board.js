@@ -3,6 +3,7 @@ var Board = function(){
 	var that = this;
 	var container = document.getElementsByClassName('container')[0];
 	var board = document.getElementsByClassName('board')[0];
+	var startBtn = document.getElementById('startGame');
 	var boardCoordinate = board.getBoundingClientRect();
 	var boardLeft = boardCoordinate.left;
 	var columnSize = 7;
@@ -153,7 +154,6 @@ var Board = function(){
 				if(that.checkWinner()){
 					setTimeout(function(){
 						alert(that.currentPlayer.name + ' won!');
-						that.init();
 					}, 50);
 					return;
 				}
@@ -170,5 +170,8 @@ var Board = function(){
 
 	});
 
-	this.init();
+	startBtn.addEventListener('click', function(event) {
+		startBtn.innerHTML = 'RESTART';
+		that.init();
+	});
 };
