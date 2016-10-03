@@ -37,10 +37,24 @@ header div {
 	justify-content: space-around;
 }
 
-.red {
+.red, .yellow {
 	height: 50px;
 	width: 50px;
 	border-radius: 50px;
+}
+
+.red.drop, .yellow.drop{
+	position: absolute;
+	animation-name: drop;
+	animation-duration: 0.25s;
+}
+
+@keyframes drop {
+	0% { opacity: 0.5; top: 125px; }
+	100% { opacity: 1; }
+}
+
+.red {
 	background-color: red;
 	background: -webkit-radial-gradient(#FF4400 50%, #DB0A0A 60%, #FF4400 70%); /* Safari 5.1 to 6.0 */
 	background: -o-radial-gradient(#FF4400 50%, #DB0A0A 60%, #FF4400 70%); /* For Opera 11.6 to 12.0 */
@@ -49,9 +63,6 @@ header div {
 }
 
 .yellow {
-	border-radius: 50px;
-	height: 50px;
-	width: 50px;
 	background-color: blue;
 	background: -webkit-radial-gradient(#0900FF 50%, #0A04BD 60%, #0900FF 70%); /* Safari 5.1 to 6.0 */
 	background: -o-radial-gradient(#0900FF 50%, #0A04BD 60%, #0900FF 70%); /* For Opera 11.6 to 12.0 */

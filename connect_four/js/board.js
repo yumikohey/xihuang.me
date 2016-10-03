@@ -9,6 +9,7 @@ var Board = function(){
 	var columnSize = 7;
 	var rowSize = 6;
 	var winStrikes = 4;
+	var animatedChess = [];
 
 	this.init = function() {
 
@@ -47,6 +48,10 @@ var Board = function(){
 					}else{
 						dot.className = 'yellow';
 					}
+					if(i === animatedChess[0] && j === animatedChess[1]) {
+						dot.classList.add('drop');
+					}
+
 					cell.appendChild(dot);
 				}
 				row.appendChild(cell);
@@ -150,6 +155,8 @@ var Board = function(){
 		for(var r=rowSize; r >=0; r--) {
 			if(that.map[r][clickColumnNumber] === 0) {
 				that.map[r][clickColumnNumber] = that.currentPlayer.value;
+				animatedChess[0] = r;
+				animatedChess[1] = clickColumnNumber;
 				// clear the screen and redraw the board
 				board.innerHTML = '';
 				that.drawMap();
@@ -157,7 +164,7 @@ var Board = function(){
 				if(that.checkWinner()){
 					setTimeout(function(){
 						alert(that.currentPlayer.name + ' won!');
-					}, 50);
+					}, 100);
 					return;
 				}
 
