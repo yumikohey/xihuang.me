@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 	<!-- Icon Font-->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/owl.theme.default.css">
 	<!-- Animate CSS-->
@@ -24,8 +24,9 @@
 
 	<!-- Responsive CSS -->
 	<link href="css/responsive.css" rel="stylesheet">
+	<script   src="http://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
 </head>
-<body ng-app="xihuang">
+<body ng-app="xihuang" ng-controller="MainCtrl">
 	<header>
 		<div class="nav-wrapper cbp-af-header">
 			<div class="col-xs-offset-1 col-md-offset-1 logo pull-left">
@@ -67,26 +68,44 @@
 						<div class="row">
 							<div class="col-xs-4 col-md-4">
 								<img src="./images/thumnail.png" width="100%">
+
+								<br>
+								<br>
+								<br>
 							</div>
 							<div class="col-md-5 col-md-offset-3">
 								<div class="row">
 									<div class="bolded_text">
-										Front End Engineer <span class="descriptive_text">@Checkbook.io</span>
+										Front End Engineer <span class="descriptive_text"><a target="_blank" href="https://www.checkbook.io">@Checkbook.io</a></span>
 									</div>
 								</div>
 
 								<br>
 
 								<div class="row">
-									<p> - Built and operated an e-commerce platform in freshman, where I started to fell in love with web development.</p>
-									<p> - Wrote options trading diary in Sina Weibo, attracted 1000+ followers in a month and got an offer from Sina as a finance columnist.</p>
-									<p> - Managed over 10,000+ items for an Amazon vendor account with $4 MM revenue a month.</p>
-									<p> - Facinate with front end technologies, React, React Native, and Angular.</p>
-									<p> - Two years working experience in fast paced startups.</p>
+									<p> I found an e-commerce website when I was freshman in college, where I started falling in love with web development. </p>
+									<p>
+									With an entrepreneur mind set, I build products with great user experience in order to attain higher convertion rates. </p>
 								</div>
 							</div>
 						</div>
 					</div>	
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<p>Determined to craft human-centered apps.</p>
+								</div>
+							</div>
+							<div class="col-md-4 col-md-offset-1">
+								<div class="row">
+									<button class="btn" style="background-color: #337ab7; color:#fff; font-size: 16px;">Download Resume</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -146,83 +165,53 @@
 				<div class="section-Name">
 					<h2>PORTFOLIOS</h2>
 				</div>
-				
-				<div class="col-md-6">
-					<div class="project-box">
-						<div class="project-box-highlighted">
-							<div class="youtube-preview">
-								<a href="https://options-er.herokuapp.com" target="_blank"><img src="images/stock.png"></a>
-							</div>
-							<div class="project-desc text-center">
-								<div class="project-title">
-									Earnings Report
-								</div>
-								<div class="project-subtitle">
-									A web app analyzes stock equities<br>
-									<a href="https://options-er.herokuapp.com">https://options-er.herokuapp.com</a>
-								</div>
-							</div>
-						</div>
-					</div>
+			</div>
+
+			<div class="row xh_carousel">
+				<div class="carousel_item show">
+					<img src="./images/stock.png" width="300px" height="180px">
+
+					<div class="carousel_title"><a href="https://www.youtube.com/watch?v=ovxFm7skJJQ">Earnings Report</a></div>
+					<div class="carousel_subtitle"> Ruby on Rails, AngularJS, EC2, Heroku, RDS </div>
 				</div>
-				<div class="col-md-6">
-					<div class="project-box">
-						<div class="project-box-highlighted">
-							<div class="youtube-preview">
-								<a href="https://www.youtube.com/watch?v=LjPvimCMA6M" target="_blank"><img src="images/zoesh.png"></a>
-							</div>
-							<div class="project-desc text-center">
-								<div class="project-title">
-									Funding Without Money
-								</div>
-								<div class="project-subtitle">
-									Lincoln Labs Hackathon 2015, 3rd place
-								</div>
-							</div>
-						</div>
-					</div>
+				<div class="carousel_item show">
+					<img src="./images/a3cube.png" width="300px" height="180px">
+
+					<div class="carousel_title"><a href="http://a3cube.herokuapp.com">A3Cube Dashboard Prototype</a></div>
+					<div class="carousel_subtitle"> Ruby on Rails, jQuery, Heroku </div>
+				</div>
+				<div class="carousel_item show">
+					<img src="./images/zoesh.png" width="300px" height="180px">
+
+					<div class="carousel_title"><a href="https://www.youtube.com/watch?v=LjPvimCMA6M">Funding without Money </a></div>
+					<div class="carousel_subtitle"> Ruby on Rails, jQuery, Heroku </div>
+				</div>
+				<div class="carousel_item hide">
+					<img src="./images/checkbook_login_modal.png" width="300px" height="180px">
+
+					<div class="carousel_title"> <a href="http://codepen.io/yumikohey/pen/YqwrGw">Checkbook Login Modal</a></div>
+					<div class="carousel_subtitle"> jQuery </div>
+				</div>
+				<div class="carousel_item hide">
+					<img src="./images/ios_app.png" width="300px" height="180px">
+
+					<div class="carousel_title"> <a href="https://itunes.apple.com/us/app/flashstock/id1084290276?mt=8&ign-mpt=uo%3D4">Flash Stock iOS App</a></div>
+					<div class="carousel_subtitle"> Ruby on Rails, APIs, IONIC</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="project-box">
-						<div class="project-box-highlighted">
-							<div class="youtube-preview">
-								<a href="https://itunes.apple.com/us/app/flashstock/id1084290276?mt=8" target="_blank"><img src="./images/ios_app.png"></a>
-							</div>
-							<div class="project-desc text-center">
-								<div class="project-title">
-									iOS App
-								</div>
-								<div class="project-subtitle">
-									An iOS app helps options traders make better investment decisions.<br>
-									<a href="https://itunes.apple.com/us/app/flashstock/id1084290276?mt=8" target="_blank"><b>Download FlashStock from App Store</b></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="project-box">
-						<div class="project-box-highlighted">
-							<div class="youtube-preview">
-								<a href="https://checkbook.io" target="_blank"><img src="./images/checkbook_login_modal.png"></a>
-							</div>
-							<div class="project-desc text-center">
-								<div class="project-title">
-									Checkbook.io Front End
-								</div>
-								<div class="project-subtitle">
-									Send Digital Checks<br>
-									<a href="http://codepen.io/yumikohey/pen/YqwrGw" target="_blank"><b>CodePen</b></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<!-- Controls -->
+			<div class="carousel_control">
+				<div id="carousel_prev" ng-click="nextSlide()"> << </div>
+				<div id="carousel_next" ng-click="nextSlide()"> >> </div>
 			</div>
+
 		</div>
 	</main>
+
+	<footer>
+		
+	</footer>
+
 	<script src="bower_components/angular/angular.min.js"></script>
 	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 	<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>

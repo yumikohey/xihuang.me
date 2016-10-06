@@ -1,6 +1,19 @@
-a:hover{
+a:hover, a:visited, a:target, a:active, a:focus{
   text-decoration: none;
 }
+
+.bolded_text {
+    color: #16a085;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.descriptive_text {
+    color: #2E97E9;
+    font-size: 24px;
+    font-weight: normal;
+}
+
 .logo {
   margin-top: 15px;
   font-size: 2em;
@@ -18,56 +31,80 @@ a:hover{
   margin-bottom: 25px;
 }
 
-.project-box {
-  margin: 5px;
-  height: 400px;
-  width: 100%;
+/* Portfolio */
+
+#portfolio {
+  margin-bottom: 100px;
 }
 
-.youtube-preview img {
-  width: 90%;
-  margin: 0 5%;
-  height: 300px;
+.xh_carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.project-box-highlighted:hover .project-desc{
-  background-color: #8acfc2;
-  -webkit-transition: width 0.8s;
-  transition: all 0.8s;
+.xh_carousel .carousel_item{
+  width: 300px;
+  height: 180px;
+  border: 1px solid #ccc;
 }
 
-.project-box-highlighted:hover .project-subtitle, .project-box-highlighted:hover a {
-  color: #fff;
-  -webkit-transition: width 1s;
-  transition: all 1s;
+.carousel_item .show{
+  display: block;
 }
 
-.project-desc {
-  width: 90%;
-  margin: 0 5%;
-  padding: 15px 0 10px 0;
+.carousel_item .hide{
+  display: none;
 }
 
-.project-desc .project-title {
-  font-size: 1.3em;
-} 
-
-.project-desc .project-subtitle, .project-desc a{
-  margin-top: 5px;
-  color: #16a085;
+.carousel_control {
+  position: relative;
+  top: -100px;
 }
 
-.bolded_text {
-    color: #16a085;
-    font-size: 24px;
-    font-weight: bold;
+#carousel_prev {
+  float: left;
+  width: 25px;
+  height: 45px;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  margin-left: 52.5px;
 }
 
-.descriptive_text {
-  color: #2E97E9;
-  font-size: 24px;
+#carousel_next {
+  float: right;
+  width: 25px;
+  height: 45px;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10;
+  margin-right: 52.5px;
+}
+
+.carousel_title {
+  margin-top: 10px;
   font-weight: normal;
+  font-size: 2rem;
+  text-align: center;
 }
+
+.carousel_subtitle {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
 /* #Navigation
 ================================================== */
 
