@@ -68,17 +68,55 @@ a:hover, a:visited, a:target, a:active, a:focus{
   font-size: 14px;
 }
 
+#download_resume {
+  float: right;
+}
+
+
 @media only screen and (max-width: 1024px) {
   #portfolio .row:nth-child(2) {
     padding: 0 30px;
   }
+
+  #download_resume {
+    margin: 25px auto 0 auto;
+    width: 60%; 
+  }
+
+  #self_intro .row:nth-child(1) {
+    padding-top: 70px;
+    position: relative;
+    left: 50px;
+  }
+
+  #slogan {
+    display: none;
+  }
+
+  .self_passage {
+    margin: 0 20px;
+  }
+
 }
 
 @media only screen and (max-width: 640px) {
   #portfolio .row:nth-child(2) {
     padding: 0 15px;
   }
+  #download_resume {
+    margin: 25px auto 0 auto;
+    width: 70%; 
+  }
+
+  #self_intro .row:nth-child(1) {
+    padding-top: 15px;
+    position: relative;
+    left: 50px;
+  }
+
 }
+
+
 
 
 /* #Navigation
@@ -643,8 +681,9 @@ padding-top: 10px;
 /*Footer*/
 footer{
   background-color: #f1f1f1;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  color: #555;
+  clear: left;
+  text-align: center;
 }
 .footer_logo{}
 .footer_logo img{}
