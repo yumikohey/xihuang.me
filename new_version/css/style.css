@@ -23,7 +23,13 @@ a:hover, a:visited, a:target, a:active, a:focus{
 .social_icons {
   height: 35px;
   width: 35px;
-  margin-top: 150px;
+  margin: 100px 5px 0 5px;
+  transform: scale(0.8);
+  transition: 0.5s all;
+}
+
+.social_icons:hover {
+  transform: scale(1.0);
 }
 
 .section-Name {
